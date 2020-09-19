@@ -15,6 +15,7 @@ Above commands will install all dependencies and run the server and client concu
 
 ### Architecture
 
+![enter image description here](./docs/architecture.drawio.svg)
 
 
 ### Case requirements
@@ -38,7 +39,7 @@ Above commands will install all dependencies and run the server and client concu
 |---|---|
 | unit & integration tests |   |
 | e2e tests |   |
-| responsive |   |
+| responsive | :heavy_check_mark: |
 | catch unknown routes |   |
 | use a grid system  |   |
 | pagination  |   |
@@ -52,8 +53,8 @@ Above commands will install all dependencies and run the server and client concu
 #### Extra+
 | item | status |
 |---|---|
-| typescript |   |
-| code formatting |   |
+| typescript | :heavy_check_mark:  |
+| code formatting | :heavy_check_mark:  |
 | ... |   |
 
 ### Data
