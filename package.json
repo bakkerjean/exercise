@@ -1,0 +1,26 @@
+{
+  "name": "rocklist",
+  "version": "1.0.0",
+  "description": "Node 10.3+",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "(cd server && npm i);(cd client && npm i);",
+    "format": "prettier --config .prettierrc 'server/index.js' 'client/src/**/*.tsx' --write"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  }
+}
