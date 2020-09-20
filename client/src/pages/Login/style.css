@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+.button-start {
+    color: black;
+    margin-top: 25px;
+}
