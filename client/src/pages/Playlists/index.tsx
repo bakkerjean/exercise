@@ -75,7 +75,7 @@ const Playlists: React.FC = () => {
           {playlists.map((playlist: any, i) => {
             if (playlist.name) {
               return (
-                <IonItem key={i} href={`/artists/${playlist.name}`}>
+                <IonItem key={i}>
                   <IonLabel>{playlist.name}</IonLabel>
                 </IonItem>
               )
