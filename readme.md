@@ -50,7 +50,7 @@ Above commands will install all dependencies and run the server and client concu
 | backend error handling   |                    |
 | local caching            |                    |
 | button animation         |                    |
-| use design patterns      |                    |
+| use design patterns      | feature model      |
 | auth                     | local session      |
 | spotify web api          |                    |
 
