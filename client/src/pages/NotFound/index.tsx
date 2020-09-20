@@ -3,13 +3,11 @@ import {
   IonContent,
   IonHeader,
   IonPage,
-  IonTitle,
-  IonToolbar,
   IonText,
   IonButton,
 } from '@ionic/react'
 
-import './NotFound.css'
+import './style.css'
 
 const NotFound: React.FC = () => {
   return (
