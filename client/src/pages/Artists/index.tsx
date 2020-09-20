@@ -68,7 +68,7 @@ const Artists: React.FC = () => {
             <IonList>
               {artists.map((artist: any) => {
                 return (
-                  <IonItem key={artist.id}>
+                  <IonItem key={artist.id} href={`/artists/${artist.id}`}>
                     <IonLabel>{artist.name}</IonLabel>
                   </IonItem>
                 )
