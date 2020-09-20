@@ -40,14 +40,14 @@ Above commands will install all dependencies and run the server and client concu
 | unit & integration tests |   |
 | e2e tests |   |
 | responsive | :heavy_check_mark: |
-| catch unknown routes |   |
+| catch unknown routes | :heavy_check_mark:  |
 | use a grid system  |   |
 | pagination  |   |
 | backend error handling  |   |
 | local caching  |   |
 | button animation  |   |
 | use design patterns  |   |
-| auth |   |
+| auth |  local session |
 | spotify web api |   |
 
 #### Extra+
