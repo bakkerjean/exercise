@@ -32,7 +32,7 @@ Above commands will install all dependencies and run the server and client concu
 | user can search artists                        | :heavy_check_mark: |
 | user can see detail page of artis              | :heavy_check_mark: |
 | user can create playlists                      | :heavy_check_mark: |
-| user and delete playlists                      |                    |
+| user can delete playlists                      |                    |
 | user can add and remove songs to/from playlist |                    |
 | user can view playlists                        | :heavy_check_mark: |
 | user can view playlist                         |                    |
