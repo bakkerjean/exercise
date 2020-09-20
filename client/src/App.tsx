@@ -13,6 +13,7 @@ import { IonReactRouter } from '@ionic/react-router'
 import { ellipse, triangle } from 'ionicons/icons'
 
 import Artists from './pages/Artists'
+import Artist from './pages/Artist'
 import Playlists from './pages/Playlists'
 import NotFound from './pages/NotFound'
 import Login from './pages/Login'
@@ -53,6 +54,7 @@ const App: React.FC = () => {
           <IonTabs>
             <IonRouterOutlet>
               <Route path="/artists" component={Artists} exact={true} />
+              <Route path="/artists/:id" component={Artist} exact={true} />
               <Route path="/playlists" component={Playlists} exact={true} />
               <Route
                 path="/"
