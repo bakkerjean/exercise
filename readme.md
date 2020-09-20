@@ -24,9 +24,9 @@ Above commands will install all dependencies and run the server and client concu
 | item | status |
 |---|---|
 | app must adhere to corp style  |   |
-| user can view list of artists |  |
-| user can search artists |  |
-| user can see detail page of artis |  |
+| user can view list of artists | :heavy_check_mark: |
+| user can search artists | :heavy_check_mark: |
+| user can see detail page of artis | :heavy_check_mark: |
 | user can create and delete playlists |  |
 | user can add and remove songs to/from playlist |  |
 | user can view playlists |  |
@@ -37,12 +37,12 @@ Above commands will install all dependencies and run the server and client concu
 #### Extra
 | item | status |
 |---|---|
-| unit & integration tests |   |
+| unit & integration tests | low coverage  |
 | e2e tests |   |
 | responsive | :heavy_check_mark: |
 | catch unknown routes | :heavy_check_mark:  |
 | use a grid system  |   |
-| pagination  |   |
+| pagination  | :heavy_check_mark: |
 | backend error handling  |   |
 | local caching  |   |
 | button animation  |   |

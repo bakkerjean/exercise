@@ -7,7 +7,7 @@
     "server": "npm start --prefix server",
     "client": "npm start --prefix client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cd client && npm run test",
     "postinstall": "(cd server && npm i);(cd client && npm i);",
     "format": "prettier --config .prettierrc 'server/index.js' 'client/src/**/*.tsx' --write"
   },
