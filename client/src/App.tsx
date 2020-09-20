@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Redirect, Route } from 'react-router-dom'
 import {
   IonApp,
@@ -15,6 +15,7 @@ import { ellipse, triangle } from 'ionicons/icons'
 import Artists from './pages/Artists'
 import Playlists from './pages/Playlists'
 import NotFound from './pages/NotFound'
+import Login from './pages/Login'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -35,33 +36,46 @@ import '@ionic/react/css/display.css'
 /* Theme variables */
 import './theme/variables.css'
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route path="/artists" component={Artists} exact={true} />
-          <Route path="/playlists" component={Playlists} exact={true} />
-          <Route
-            path="/"
-            render={() => <Redirect to="/artists" />}
-            exact={true}
-          />
-          <Route render={() => <NotFound />} />
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="artists" href="/artists">
-            <IonIcon icon={triangle} />
-            <IonLabel>Artists</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="playlists" href="/playlists">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Playlists</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-)
+const App: React.FC = () => {
+  const activeSession = sessionStorage.getItem('rocklistSession')
+
+  const [loggedIn, setLoggedIn] = useState(activeSession || false)
+
+  const isLoggedIn = (val: any) => {
+    setLoggedIn(val)
+  }
+
+  return (
+    <IonApp>
+      {!loggedIn && <Login isLoggedIn={isLoggedIn} />}
+      {loggedIn && (
+        <IonReactRouter>
+          <IonTabs>
+            <IonRouterOutlet>
+              <Route path="/artists" component={Artists} exact={true} />
+              <Route path="/playlists" component={Playlists} exact={true} />
+              <Route
+                path="/"
+                render={() => <Redirect to="/artists" />}
+                exact={true}
+              />
+              <Route render={() => <NotFound />} />
+            </IonRouterOutlet>
+            <IonTabBar slot="bottom">
+              <IonTabButton tab="artists" href="/artists">
+                <IonIcon icon={triangle} />
+                <IonLabel>Artists</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="playlists" href="/playlists">
+                <IonIcon icon={ellipse} />
+                <IonLabel>Playlists</IonLabel>
+              </IonTabButton>
+            </IonTabBar>
+          </IonTabs>
+        </IonReactRouter>
+      )}
+    </IonApp>
+  )
+}
 
 export default App
